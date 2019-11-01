@@ -21,7 +21,7 @@ namespace EpPlus.PackageReader
 			foreach(var h in headers)
             {
                 var header = h.Replace("\r", "").Replace("\n", string.Empty);
-                var newHeader = header;
+                var newHeader = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(header.ToLower());
 
                 newHeader = newHeader
                   .Replace("][", "_");

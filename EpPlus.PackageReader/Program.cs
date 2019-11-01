@@ -1,4 +1,5 @@
 ﻿using EpPlus.PackageReader.Test;
+using EpPlus.PackageReader.TestModel;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.IO;
@@ -21,8 +22,8 @@ namespace EpPlus.PackageReader
                 VerticalHeaderExcelRange = x["VerticalHeaderExcelRange"],
             }).ToArray());
 
-            //var hozironItems = result.First().HorizontalItems.CreateInstance<RecordTestModel>();
-            //var verticalItems = result.First().VerticalItems.CreateInstance<HeaderTestModel>();
+            //var hozironItems = result.Skip(1).First().HorizontalItems.CreateInstance<Sheet2DataRecord>();
+            //var verticalItems = result.Skip(1).First().VerticalItems.CreateInstance<Sheet2DataHeader>();
 
             foreach(var res in result)
             {
